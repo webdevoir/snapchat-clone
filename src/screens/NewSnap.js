@@ -8,9 +8,14 @@ export default class NewSnap extends Component {
   }
 
   goSend = () => {
-    this.props.navigator.push({
+    const { navigator, snapCaptured } = this.props
+
+    navigator.push({
       screen: 'SnapchatClone.SendScreen',
-      title: 'Send'
+      title: 'Send',
+      passProps: {
+        snapCaptured
+      }
     })
   }
 

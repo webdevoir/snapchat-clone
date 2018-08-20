@@ -33,7 +33,7 @@ class LoginScreen extends Component {
           </Item>
           <Item floatingLabel style={{ marginBottom: 30 }}>
             <Label>Password</Label>
-            <Input />
+            <Input secureTextEntry />
           </Item>
           <Button
             full

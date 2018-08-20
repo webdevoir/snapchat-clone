@@ -25,12 +25,17 @@ class SendScreen extends Component {
     // add to current user's snaps for now
     const { currentUser, snapCaptured } = this.props
     const now = new Date()
+    let snapSource =
+      'https://images.unsplash.com/photo-1534535674105-40d57109f1f6?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=5ab40c690ba2d39c97d6a718dd2062b5&auto=format&fit=crop&w=668&q=80'
+
+    if (snapCaptured) {
+      snapSource = snapCaptured
+    }
 
     const snap = {
       id: now.getTime(),
       author: currentUser.name,
-      source:
-        'https://images.unsplash.com/photo-1534535674105-40d57109f1f6?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=5ab40c690ba2d39c97d6a718dd2062b5&auto=format&fit=crop&w=668&q=80',
+      source: snapSource,
       timestamp: 'Just now'
     }
 

@@ -15,7 +15,6 @@ console.disableYellowBox = true
 
 class App {
   constructor() {
-    StatusBar.setBarStyle('light-content')
     store.subscribe(this.onStoreUpdate.bind(this))
     const { isLoggedIn } = store.getState().auth
 
@@ -35,6 +34,7 @@ class App {
 
   startApp(isLoggedIn) {
     if (!isLoggedIn) {
+      StatusBar.setBarStyle('dark-content')
       Navigation.startSingleScreenApp({
         screen: {
           screen: 'SnapchatClone.LoginScreen',
@@ -44,6 +44,7 @@ class App {
         }
       })
     } else {
+      StatusBar.setBarStyle('light-content')
       Navigation.startTabBasedApp({
         tabs: [
           {
