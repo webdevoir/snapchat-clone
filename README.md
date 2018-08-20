@@ -6,7 +6,7 @@ A simple Snapchat clone built with React Native to learn and for fun.
 
 ✅ React Native Navigation
 
-✅ Redux State Management
+✅ Redux State Management w/ Mock Data
 
 ✅ React Native Camera
 
